@@ -88,9 +88,25 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+let passwordArray=[];
+let passwordLen=0;
+
 // Function to prompt user for password options
 function getPasswordOptions() {
 
+  passwordLen = prompt("How long will you want your password to be?")
+if(confirm(" Would you like to use lowercase letters? ")){
+  passwordArray=passwordArray.concat(lowerCasedCharacters);
+} 
+if(confirm(" Would you like use special characters? ")){
+  passwordArray=passwordArray.concat(specialCharacters);
+}
+if(confirm("Would you like to use numeric characters ?")){
+passwordArray=passwordArray.concat(numericCharacters);
+}
+if(confirm("Would you like to use Uppercased letters ?")){
+  passwordArray=passwordArray.concat(upperCasedCharacters);
+}
 }
 
 // Function for getting a random element from an array
@@ -100,7 +116,16 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
+ let password = "";
+ 
+  getPasswordOptions();
 
+  for (let i = 0; i < passwordLen; i++) {
+    password += passwordArray[Math.floor(Math.random()*passwordArray.length)];
+    
+  }
+   
+  return password;
 }
 
 // Get references to the #generate element
