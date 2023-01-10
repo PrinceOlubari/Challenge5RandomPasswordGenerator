@@ -121,7 +121,7 @@ function getPasswordOptions() {
         " Would you like to use numeric characters? "
       );
     }
-    if (lowerCaseConfirm) {
+    if (lowerCaseConfirm===true) {
       passwordArray = passwordArray.concat(lowerCasedCharacters);
     }
     if (specialCharactersConfirm) {
