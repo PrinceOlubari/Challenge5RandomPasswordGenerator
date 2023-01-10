@@ -127,7 +127,7 @@ function getPasswordOptions() {
     if (specialCharactersConfirm===true) {
       passwordArray = passwordArray.concat(specialCharacters);
     }
-    if (numericCharacterConfirm) {
+    if (numericCharacterConfirm===true) {
       passwordArray = passwordArray.concat(numericCharacters);
     }
     if (upperCaseCofirm) {
