@@ -130,7 +130,7 @@ function getPasswordOptions() {
     if (numericCharacterConfirm===true) {
       passwordArray = passwordArray.concat(numericCharacters);
     }
-    if (upperCaseCofirm) {
+    if (upperCaseCofirm===true) {
       passwordArray = passwordArray.concat(upperCasedCharacters);
     }
   } else if (passwordLen < 10 || passwordLen > 64 || isNaN(passwordLen)) {
