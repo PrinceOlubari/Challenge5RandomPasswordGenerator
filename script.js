@@ -124,7 +124,7 @@ function getPasswordOptions() {
     if (lowerCaseConfirm===true) {
       passwordArray = passwordArray.concat(lowerCasedCharacters);
     }
-    if (specialCharactersConfirm) {
+    if (specialCharactersConfirm===true) {
       passwordArray = passwordArray.concat(specialCharacters);
     }
     if (numericCharacterConfirm) {
